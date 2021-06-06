@@ -3,6 +3,10 @@ import "./publish.css"
 export default function Publish() {
   return (
     <div className="publish">
+      <img className="publishImg"
+        src="https://www.chf.or.kr/jnrepo/namo/img/images/000005/20210119182559666_QHTTNT8F.jpg"
+        alt=""
+      />
       <form className="publishForm">
         <div className="publishFormGroup">
           {/* links to id="fileInput" */}
@@ -14,7 +18,7 @@ export default function Publish() {
           <input type="text" placeholder="Title" className="publishInput" autoFocus={true} />
         </div>
         <div className="publishFormGroup">
-          <textarea placeholder="Tell your story..." type="text" className="publishInput"></textarea>
+          <textarea placeholder="Tell your story..." type="text" className="publishInput publishText"></textarea>
         </div>
         <button className="publishBtn">Publish</button>
       </form>

@@ -2,6 +2,18 @@
   padding-top: 50px;
 }
 
+.publishImg {
+  margin-left: 150px;
+  width: 70vw;
+  height: 250px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.publishForm {
+  position: relative;
+}
+
 .publishFormGroup {
   margin-left: 150px;
   display: flex;
@@ -32,14 +44,15 @@
   outline: none;
 }
 
-.publishInput {
+.publishText {
   font-size: 20px;
+  height: 100vh;
 }
 
 .publishBtn {
   position: absolute;
-  top: 185px;
-  right: 140px;
+  top: 85px;
+  right: 130px;
   color: rgb(23, 63, 82);
   background-color: #F6F1EB;
   padding: 10px;
