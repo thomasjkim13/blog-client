@@ -1,6 +1,6 @@
 import Navbar from "./components/Navbar/Navbar"
 import Home from "./components/Links/Home/Homepage"
-import PostShow from "./components/PostShow/PostShow"
+import PostShow from "./components/Show/Show"
 
 function App() {
   return (
