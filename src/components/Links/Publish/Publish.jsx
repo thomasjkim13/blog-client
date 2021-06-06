@@ -11,10 +11,10 @@ export default function Publish() {
           </label>
           <input type="file" id="fileInput" style={{display:"none"}} />
           {/* autoFocus automatically focuses on the text input */}
-          <input type="text" placeholder="title" className="publishInput" autoFocus={true} />
+          <input type="text" placeholder="Title" className="publishInput" autoFocus={true} />
         </div>
         <div className="publishFormGroup">
-          <textarea placeholder="Tell your story..." type="text" className="publishStory"></textarea>
+          <textarea placeholder="Tell your story..." type="text" className="publishInput"></textarea>
         </div>
         <button className="publishBtn">Publish</button>
       </form>

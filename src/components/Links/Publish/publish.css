@@ -20,3 +20,31 @@
   color: rgb(124, 105, 105);
   cursor: pointer;
 }
+
+.publishInput {
+  font-size: 20px;
+  border: none;
+  padding: 20px;
+  width: 70vw;
+}
+
+.publishInput:focus{
+  outline: none;
+}
+
+.publishInput {
+  font-size: 20px;
+}
+
+.publishBtn {
+  position: absolute;
+  top: 185px;
+  right: 140px;
+  color: rgb(23, 63, 82);
+  background-color: #F6F1EB;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+}
