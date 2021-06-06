@@ -14,7 +14,7 @@ export default function Navbar() {
           <li className="navLink">HOME</li>
           <li className="navLink">ABOUT</li>
           <li className="navLink">CONTACT</li>
-          <li className="navLink">WRITE</li>
+          <li className="navLink">PUBLISH</li>
           <li className="navLink">LOGOUT</li>
         </ul>
       </div>
