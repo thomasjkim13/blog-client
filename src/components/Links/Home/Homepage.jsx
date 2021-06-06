@@ -1,6 +1,6 @@
 import "./homepage.css"
 import Header from "../../Header/Header"
-import Posts from "../../Posts/Posts"
+import Posts from "../../PostsIndex/Posts"
 import Sidebar from "../../Sidebar/Sidebar"
 
 export default function Homepage() {
