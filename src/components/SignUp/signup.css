@@ -1,4 +1,4 @@
-.signin {
+.signup {
   height: calc(100vh - 50px);
   display: flex;
   flex-direction: column;
@@ -13,28 +13,28 @@
   background-size: cover;
 }
 
-.signinTitle {
+.signupTitle {
   font-size: 50px;
 }
 
-.signinForm {
+.signupForm {
   margin-top: 20px;
   display: flex;
   flex-direction: column;
 }
 
-.signinForm > label {
+.signupForm > label {
   margin: 10px 0;
 }
 
-.signinInput {
+.signupInput {
   padding: 10px;
   background-color: white;
   border: none;
   border-radius: 5px;
 }
 
-.signinBtn {
+.signupBtn {
   margin-top: 20px;
   cursor: pointer;
   background-color: #556B2F;
