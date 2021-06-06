@@ -22,3 +22,72 @@
   font-family: 'Lora', sans-serif;
   font-size: 28px;
 }
+
+.postShowEdit {
+  float: right;
+  font-size: 16px;
+}
+
+.postShowIcon{
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.postShowIcon:first-child {
+  color: teal;
+}
+
+.postShowIcon:last-child {
+  color: tomato;
+}
+
+.postShowInfo {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  color: #b39656;
+  font-family: 'Varela Round', sans-serif;
+}
+
+.postShowDate {
+  font-size: 11px;
+}
+
+.postShowDesc {
+  line-height: 25px;
+  font-size: 18px;
+  color: #666;
+}
+
+.postShowDesc::first-letter {
+  margin-left: 20px;
+  font-size: 30px;
+  font-weight: 600px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
