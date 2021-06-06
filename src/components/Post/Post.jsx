@@ -11,7 +11,7 @@ export default function Post() {
           <span className="postCategory">Food</span>
         </div>
         <span className="postTitle">
-          Lorem ipsum dolor sit amet, consectetur
+          Lorem ipsum dolor sit amet
         </span>
         <hr/>
         <span className="postDate">1 hour ago</span>
