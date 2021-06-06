@@ -5,13 +5,18 @@ export default function Publish() {
     <div className="publish">
       <form className="publishForm">
         <div className="publishFormGroup">
+          {/* links to id="fileInput" */}
           <label htmlFor="fileInput">
-            <i class="far fa-plus-square"></i>
+            <i class="fas fa-folder-plus"></i>
           </label>
-          <input type="file" id="fileInput" />
-          <input type="text" placeholder="title" />
-
+          <input type="file" id="fileInput" style={{display:"none"}} />
+          {/* autoFocus automatically focuses on the text input */}
+          <input type="text" placeholder="title" className="publishInput" autoFocus={true} />
         </div>
+        <div>
+          <textarea placeholder="Tell your story..." type="text" className="publishStory"></textarea>
+        </div>
+        <button className="publishBtn">Publish</button>
       </form>
     </div>
   )
