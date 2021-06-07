@@ -10,7 +10,7 @@ export default function PostShow() {
   const location = useLocation()
   const path = location.pathname.split("/")[2]
   const [post, setPost] = useState({})
-  const Folder = "localhost:5000/image"
+  const Folder = "http://localhost:5000/images/"
   const {user} = useContext(Context)
 
   useEffect(() => {
@@ -23,7 +23,7 @@ export default function PostShow() {
   
   const handleDelete = async () => {
     try {
-      await axios.delete(`/posts/{${post._id}`, { data: {username:user.username}})
+      await axios.delete(`/posts/${post._id}`, { data: { username:user.username },})
       window.location.replace("/")
     } catch (err) {}
   }
