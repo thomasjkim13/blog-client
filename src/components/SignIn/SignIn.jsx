@@ -23,7 +23,6 @@ export default function SignIn() {
     }
   }
 
-  console.log(user)
   return (
     <div className="signin">
       <span className="signinTitle">SignIn</span>
