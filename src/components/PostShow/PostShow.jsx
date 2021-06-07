@@ -17,25 +17,33 @@ export default function PostShow() {
   const [update, setUpdate] = useState(false)
 
   useEffect(() => {
+    // create getPost function, async
     const getPost = async () => {
+      // axios get signle post
       const res = await axios.get("/posts/" + path)
+      // setPost to use post in useState
       setPost(res.data)
       setTitle(res.data.title)
       setDesc(res.data.desc)
     }
     getPost()
+    // whenever path changes, fire useEffect
   }, [path])
   
+  // delete function to delete owners post
   const handleDelete = async () => {
     try {
       await axios.delete(`/posts/${post._id}`, { data: { username:user.username },})
+      // when deleted, direct to this link
       window.location.replace("/")
     } catch (err) {}
   }
-
+  
+  // function to update post information
   const handleUpdate = async () => {
     try {
       await axios.put(`/posts/${post._id}`, { 
+        // update these properties
         username:user.username, 
         title, 
         desc 
@@ -49,6 +57,7 @@ export default function PostShow() {
       <div className="postShowWrapper">
         {post.photo && (
           <img className="postShowImg" 
+          // use image from the image folder stored locally to keep it default
           src={Folder + post.photo}
           alt="" />
         )}{

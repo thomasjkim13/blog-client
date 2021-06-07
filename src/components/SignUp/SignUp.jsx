@@ -12,6 +12,7 @@ export default function SignUp() {
   const handleSubmit = async (e) => {
     e.preventDefault()
     setError(false)
+    // The try statement lets you test a block of code for errors
     try {
       const res = await axios.post("/auth/signup", {
         username, 
@@ -19,6 +20,8 @@ export default function SignUp() {
         password,
       });
      res.data && window.location.replace("/signin")
+    // catch error if wrong info in the input field
+    // The catch statement lets you handle the error
     } catch(err) {
       setError(true)
     }
