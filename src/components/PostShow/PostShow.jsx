@@ -12,11 +12,16 @@ export default function PostShow() {
   const [post, setPost] = useState({})
   const Folder = "http://localhost:5000/images/"
   const {user} = useContext(Context)
+  const [title, setTitle] = useState("")
+  const [desc, setDesc] = useState("")
+  const [update, setUpdate] = useState(false)
 
   useEffect(() => {
     const getPost = async () => {
       const res = await axios.get("/posts/" + path)
       setPost(res.data)
+      setTitle(res.data.title)
+      setDesc(res.data.desc)
     }
     getPost()
   }, [path])
@@ -28,6 +33,17 @@ export default function PostShow() {
     } catch (err) {}
   }
 
+  const handleUpdate = async () => {
+    try {
+      await axios.put(`/posts/${post._id}`, { 
+        username:user.username, 
+        title, 
+        desc 
+      })
+      setUpdate(false)
+    } catch (err) {}
+  }
+
   return (
     <div className="postShow">
       <div className="postShowWrapper">
@@ -35,16 +51,27 @@ export default function PostShow() {
           <img className="postShowImg" 
           src={Folder + post.photo}
           alt="" />
-        )}
-        <h1 className="postShowTitle">
-          {post.title}
-          {post.username === user.username && (
-            <div className="postShowEdit">
-              <i className="postShowIcon far fa-edit"></i>
-              <i className="postShowIcon far fa-trash-alt" onClick={handleDelete}></i>
-            </div>
-          )}
-        </h1>
+        )}{
+          update ? (
+            <input 
+            type="text" 
+            value={title} 
+            className="postShowTitleInput" 
+            autoFocus 
+            onChange={(e) => setTitle(e.target.value)}
+            /> 
+            ) : (
+            <h1 className="postShowTitle">
+              {title}
+              {post.username === user.username && (
+                <div className="postShowEdit">
+                  <i className="postShowIcon far fa-edit" onClick={() => setUpdate(true)}></i>
+                  <i className="postShowIcon far fa-trash-alt" onClick={handleDelete}></i>
+                </div>
+              )}
+            </h1>
+          )
+        }
         <div className="postShowInfo">
           <span className="postShowAuthor">Author: 
           <Link to ={`/?user=${post.username}`} className="link">
@@ -53,9 +80,14 @@ export default function PostShow() {
           </span>
           <span className="postShowDate">{new Date(post.createdAt).toDateString()}</span>
         </div>
-        <p className="postShowDesc">
-          {post.desc}
-        </p>
+        {update ? (
+          <textarea className="postShowDescInput" value={desc} onChange={(e) => setDesc(e.target.value)} />
+        ) : (
+          <p className="postShowDesc">{desc}</p>
+        )}
+        {update && (
+        <button className="postShowButton" onClick={handleUpdate}>Update</button>
+        )}
       </div>
     </div>
   )
