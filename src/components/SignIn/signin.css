@@ -44,6 +44,11 @@
   padding: 10px;
 }
 
+.signinBtn:disabled {
+  cursor: not-allowed;
+  background-color: rgb(241, 172, 147);
+}
+
 .signupRegisterBtn {
   margin-top: 20px;
   cursor: pointer;

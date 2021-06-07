@@ -5,15 +5,13 @@ import AccountSettings from "./components/AccountSettings/AccountSettings"
 import SignIn from "./components/SignIn/SignIn"
 import SignUp from "./components/SignUp/SignUp"
 import PostShow from "./components/Show/Show"
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route
-} from "react-router-dom";
+import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import { useContext } from "react"
+import { Context } from "./context/Context"
 
 
 function App() {
-  const user = false;
+  const {user} = useContext(Context)
   return (
     <Router>
       <Navbar />
