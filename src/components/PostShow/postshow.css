@@ -31,7 +31,7 @@
   font-family: 'Lora', sans-serif;
   font-size: 28px;
   border: none;
-  color: gray
+  color: gray;
   border-bottom: 1px solid lightgray
 }
 
@@ -103,7 +103,6 @@
   cursor: pointer;
   align-self: flex-end;
   margin-top: 20px;
-
 }
 
 

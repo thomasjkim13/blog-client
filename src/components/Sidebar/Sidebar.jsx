@@ -23,7 +23,7 @@ export default function Sidebar() {
         src="https://www.smartertravel.com/wp-content/uploads/2016/08/travel-tourist-photographer-lens-camera-sunset.jpg" alt="man with camera" />
         <p>lorem ipsum dolor sit amet, consectetur</p>
       </div>
-      <div className="barLink">
+      {/* <div className="barLink">
         <span className="barItem">CATEGORIES</span>
         <ul className="barList">
           {cats.map((c) => (
@@ -32,7 +32,7 @@ export default function Sidebar() {
             </Link>
           ))}
         </ul>
-      </div>
+      </div> */}
       <div className="barLink">
         <span className="barItem">FOLLOW US</span>
         <div className="barSocialMedia">

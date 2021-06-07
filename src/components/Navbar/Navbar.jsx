@@ -5,6 +5,7 @@ import "./navbar.css";
 
 export default function Navbar() {
   const { user, dispatch } = useContext(Context)
+  const Folder = "http://localhost:5000/images/"
 
   const handleSignOut = () => {
     dispatch ({ type: "SIGNOUT"})
@@ -30,9 +31,9 @@ export default function Navbar() {
       <div className="nav-right">
         {/* if there is user, allow user to user profile picture */}
         {user? (
-          <img className="profileImage" 
-          src={user.profilePic}
-          alt=""/>
+          <Link to="/accountsettings">
+            <img className="profileImage" src={ Folder + user.profilePic } alt=""/>
+          </Link>
         ) : (
           // if not, direct to these links
           <ul className="nav-link">
