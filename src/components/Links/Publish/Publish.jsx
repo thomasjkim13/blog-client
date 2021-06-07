@@ -17,7 +17,7 @@ export default function Publish() {
       desc
     }
     if(file) {
-      const data = FormData()
+      const data = new FormData()
       const filename = Date.now() + file.name
       data.append("name", filename)
       data.append("file", file)
@@ -46,12 +46,28 @@ export default function Publish() {
           <label htmlFor="fileInput">
             <i className="publishIcon fas fa-folder-plus"></i>
           </label>
-          <input type="file" id="fileInput" style={{display:"none"}} onChange={(e) => setFile(e.target.files[0])}/>
+          <input 
+            type="file" 
+            id="fileInput" 
+            style={{display:"none"}} 
+            onChange={(e) => setFile(e.target.files[0])}
+          />
           {/* autoFocus automatically focuses on the text input */}
-          <input type="text" placeholder="Title" className="publishInput" autoFocus={true} />
+          <input 
+            type="text" 
+            placeholder="Title" 
+            className="publishInput" 
+            autoFocus={true} 
+            onChange={(e) => setTitle(e.target.value)}
+          />
         </div>
         <div className="publishFormGroup">
-          <textarea placeholder="Tell your story..." type="text" className="publishInput publishText"></textarea>
+          <textarea 
+            placeholder="Tell your story..." 
+            type="text" 
+            className="publishInput publishText" 
+            onChange={(e) => setDesc(e.target.value)}>
+          </textarea>
         </div>
         <button className="publishBtn" type="submit">Publish</button>
       </form>
