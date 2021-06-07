@@ -59,6 +59,7 @@
 
 .postShowInfo {
   margin-bottom: 20px;
+  margin-left: 20px;
   display: flex;
   justify-content: space-between;
   font-size: 16px;
