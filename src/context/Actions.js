@@ -10,3 +10,7 @@ export const SigninSuccess = (user) => ({
 export const SigninFailure = () => ({
   type: "SIGNIN_FAILURE"
 })
+
+export const SignoutFailure = () => ({
+  type: "SIGNOUT"
+})

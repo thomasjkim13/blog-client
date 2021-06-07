@@ -4,7 +4,11 @@ import { Context } from "../../context/Context"
 import "./navbar.css";
 
 export default function Navbar() {
-  const {user} = useContext(Context)
+  const { user, dispatch } = useContext(Context)
+
+  const handleSignOut = () => {
+    dispatch ({ type: "SIGNOUT"})
+  }
   return (
     <div className="nav">
       <div className="nav-left">
@@ -17,7 +21,7 @@ export default function Navbar() {
         <ul className="nav-link">
           <li className="navLink"><Link to="/" className="link">HOME</Link></li>
           <li className="navLink"><Link to="/publish" className="link">PUBLISH</Link></li>
-          <li className="navLink">
+          <li className="navLink" onClick={ handleSignOut }>
             {/* if there is user, show LOGOUT */}
             {user && "LOGOUT"}
           </li>
@@ -27,7 +31,8 @@ export default function Navbar() {
         {/* if there is user, allow user to user profile picture */}
         {user? (
           <img className="profileImage" 
-          src="https://thumbor.forbes.com/thumbor/fit-in/1200x0/filters%3Aformat%28jpg%29/https%3A%2F%2Fspecials-images.forbesimg.com%2Fimageserve%2F5f709d82fa4f131fa2114a74%2F0x0.jpg" alt="person and airplane"/>
+          src={user.profilePic}
+          alt=""/>
         ) : (
           // if not, direct to these links
           <ul className="nav-link">

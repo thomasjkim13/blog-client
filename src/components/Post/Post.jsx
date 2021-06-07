@@ -8,7 +8,7 @@ export default function Post({post}) {
       <img 
       className="postImg" 
       src={post.photo} 
-      alt="Korean traditional food" />
+      alt="" />
       )}
       <div className="postInfo">
         <div className="postCategories">
