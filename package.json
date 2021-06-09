@@ -1,5 +1,6 @@
 {
-  "name": "blog-project",
+  "name": "blog-client",
+  "homepage": "https://thomasjkim13.github.io/blog-client",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
