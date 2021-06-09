@@ -19,6 +19,7 @@ export default function SignUp() {
         email, 
         password,
       });
+      // once signedup, direct to signin page
      res.data && window.location.replace("/signin")
     // catch error if wrong info in the input field
     // The catch statement lets you handle the error
