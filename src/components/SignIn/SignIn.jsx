@@ -7,7 +7,7 @@ import "./signin.css"
 export default function SignIn() {
   const userRef = useRef()
   const passwordRef = useRef()
-  const { user, dispatch, isFetching } = useContext(Context)
+  const { dispatch, isFetching } = useContext(Context)
 
   const handleSubmit = async (e) => {
     e.preventDefault()
