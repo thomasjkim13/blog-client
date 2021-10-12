@@ -14,7 +14,7 @@ export default function Navbar() {
     <div className="nav">
       <div className="nav-left">
         <i className="navIcon fab fa-facebook"></i>
-        <i className="navIcon fab fa-twitter"></i>
+        {/* <i className="navIcon fab fa-twitter"></i> */}
         <i className="navIcon fab fa-linkedin"></i>
         <i className="navIcon fab fa-instagram"></i>
       </div>
