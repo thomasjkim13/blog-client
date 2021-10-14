@@ -12,8 +12,10 @@ export default function SignIn() {
   const handleSubmit = async (e) => {
     e.preventDefault()
     dispatch({ type:"SIGNIN_START" })
+    // API call
     try {
       const res = await axios.post("/auth/signin", {
+        // pass my data username and password
         username: userRef.current.value,
         password: passwordRef.current.value
       })
@@ -28,9 +30,19 @@ export default function SignIn() {
       <span className="signinTitle">SignIn</span>
       <form className="signinForm" onSubmit={ handleSubmit }>
         <label>Username</label>
-        <input type="text" className="signinInput" placeholder="Enter your username..." ref={userRef}/>
+        <input 
+          type="text" 
+          className="signinInput" 
+          placeholder="Enter your username..." 
+          ref={userRef}
+        />
         <label>Password</label>
-        <input type="password" className="signinInput" placeholder="Enter your password..." ref={passwordRef} />
+        <input 
+          type="password" 
+          className="signinInput" 
+          placeholder="Enter your password..." 
+          ref={passwordRef} 
+        />
         <button className="signinBtn" type="submit" disabled={isFetching}>SignIn</button>
       </form>
       <button className="signupRegisterBtn">
