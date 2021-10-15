@@ -84,7 +84,7 @@ export default function PostShow() {
         <div className="postShowInfo">
           <span className="postShowAuthor">Author : 
           <Link to ={`/?user=${post.username}`} className="link">
-            <b> {post.username}</b>
+            <b>{post.username}</b>
           </Link>
           </span>
           <span className="postShowDate">{new Date(post.createdAt).toDateString()}</span>
